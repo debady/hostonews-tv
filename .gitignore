@@ -8,3 +8,7 @@ A_FAIRES.md
 
 .vscode/
 admin.php
+vendor
+
+.env
+numero/.env
