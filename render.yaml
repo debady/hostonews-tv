@@ -2,7 +2,7 @@ services:
   - type: web
     name: hostonews-php
     env: docker
-    repo: https://github.com/TON_UTILISATEUR/TON_DEPOT
+    repo: https://github.com/debady/hostonews-tv.git
     branch: main
     dockerfilePath: ./Dockerfile
     plan: free

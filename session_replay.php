@@ -1,5 +1,4 @@
 <?php
-    //include('traitement/connect_BD.php');
     $sql = "SELECT * FROM replay";
     $stmt = $pdo->query($sql);
     $replays = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -77,4 +76,3 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-

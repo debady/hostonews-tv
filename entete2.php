@@ -54,14 +54,14 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="programme.php">Programmes</a>
                         </li>
-                        
+<!--                         
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="magasine/hostomags.php">hostomags</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="magasine display/hostomag2.php">hostomag2</a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="emission.php">Emission</a>
