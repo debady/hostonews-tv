@@ -1,14 +1,15 @@
-# Utilise l'image officielle PHP avec Apache
 FROM php:8.2-apache
 
-# Installe les extensions nécessaires (ex: PostgreSQL)
-RUN docker-php-ext-install pdo pdo_pgsql
+# Installer les dépendances système nécessaires à PostgreSQL + extensions PHP
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql
 
-# Copie tous les fichiers de ton projet dans le dossier web d’Apache
-COPY . /var/www/html/
-
-# Active mod_rewrite pour Apache si tu utilises des routes propres
+# Activer mod_rewrite (si tu en as besoin pour les routes propres)
 RUN a2enmod rewrite
 
-# Donne les bons droits
+# Copier les fichiers de ton projet dans le dossier web d’Apache
+COPY . /var/www/html/
+
+# Définir les bons droits
 RUN chown -R www-data:www-data /var/www/html
