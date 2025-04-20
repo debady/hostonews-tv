@@ -1,0 +1,193 @@
+notre projet c'est nommé hostoNewTv c'est une application
+web codé en php, sq, javascrit le but c'est d'informer sur la santé des 
+ les pays dont nous avons des corespondant (côte d'ivoire,burkina faso , ghana,etc )
+
+nous ADMINISTRATEUR notre rôle est de développer , ameliorer, ajouter des publicté et veiller 
+au bon foctionnement 
+
+nos crespondant a travers un formulaire peuvent poster 
+des informations, 
+des emmissions, 
+des lives (dont ils récupèrent les liens apartir du direct commencé sur youtube) ,
+des prgramme a venir 
+journal télévisé charger sur youtube en direct puis si le jounal finir on peut le retrouver dans 
+l'historique des journaux par date
+
+donc un utilisateur viens sur la plate-forme puis choisir le pays dont il souhaite voir les informations 
+puis le contenus du sites s'adapte en foction de ce pays choisir , 
+
+l'utilisateur peut s'informer, regarder les lives , journals ,emmissions 
+sans être inscris mais lorsqu'il souhaite interagir sur la plateforme comme faire un commentaire, 
+liker ou reagir un poste, il sera obliger de se connecter s'il est deja inscris sinon il va devoir en créer 
+
+                PARTIE ADMINISTRATEUR (Développeur)
+    Admin_correspondant 
+
+        -nom & prenom 
+        -numero téléphone 
+        -Email 
+        -Mot de passe 
+        -acces Token (generer a chaque connexion pour mettre à jour dans la bd puis mettre dans l'url) 
+        -etat(connecter , deconnecté) 
+        -profile(reference à la table images)
+    
+
+    historique_connexion
+        -id(faire reference à la tale Admin_correspondant)
+        -date connexion
+        -date deconnexion
+
+
+                PARTIE CORRESPONDANT 
+    
+    Image_slade
+        -Image(Grand format;reference à la table images)
+        -titre
+        -ptte_descript
+        -grd_descrip (Retir dit des vidéo)
+        -Image 1 (Facultatif,reference à la table images) 
+        -Image 2 (Facultatif,reference à la table images)
+        -id_Video (Facultatif,faire reference à la table video )
+        -Recup_Pays Hidden(Posteur)
+        -Date publié
+        -id_categorie(reference à la table categorie) 
+
+    Dernières Nouvelles 
+        -id 
+        -id_ategories  
+        -titre 
+        -ptte_descript
+        -Image (vidéo, photo)  
+        -Date Publié 
+
+    categorie
+        -id 
+        -nom_categorie (à la une ,ne pas manquer, à venir,  mag de santé, In hosto, etc)
+
+    Journale télévisé
+        -Mignature
+        -titre 
+        -ptte_descript
+        -grd_descrip (apèrs clique)  
+        -vidéo
+        -date_publié
+
+    Emmission
+        -titre
+        -id_vidéo(reference à la table video )
+        -épisode
+        -description
+        -Image 1 (Facultatif)
+        -Image 1 (Facultatif)
+        -id_categories 
+        -date_publié
+        (Dès que une emmission, un journal finir ça par automatiquement dans la table repaly)
+
+    Programme
+        -titre 
+        -id_Image(reference à la table images )
+        -description
+        -categories 
+        -date_publié
+        -date_evernement
+
+    images 
+        -id
+        -id_poste
+
+    
+    Publicite
+        -id_publicite
+        -type_publicite
+        -emplacement
+        -id_video (réference à la table vidéo)
+
+    faqs
+        -titre (informations générale,a propos,etc )
+        -questions 
+        -réponses
+
+    politiques de configuration  & conditions d'utilisateur 
+
+
+    session
+        -categorie (mag de santé, In hosto, etc)
+        -bannière  
+        -ptte_descript
+        -reaction
+        -text_bouton
+        -grd_descrip
+        -vidéo  
+        
+    Direct 
+        -id_direct
+        -Titre 
+        -ptte_descript
+        -bannière
+        -ur_live_youtube
+        -commentaire
+        -date_live
+        -id_video(reference à la table video )
+        -reaction (Like,coeur,etc)
+
+    
+    VIDEO
+        -id 
+        -description 
+        -url 
+        -type 
+        -Mignature
+        -date_publié
+        -auteur 
+        -nbre_vues 
+        -nbre_likes 
+        -nbre_commentaires
+        (quand on clique dessus il faut que ça redirige sur une autre page avec les informations complète)
+
+            
+                PARTIE UTILISATEUR 
+
+    utilisateur 
+
+        -nom & prénom 
+        -email 
+        -numéro de téléphone
+        -pays (*) 
+        -Mot de passe -
+        -Photo de profile -
+
+        -date inscription -
+        -Etat (En ligne, deconnecté)
+        -acces token
+        -verif (
+                après inscription il réçois un email avec le lien configuration ou
+                un code à 6 chiffre par sms sur son numéro de téléphone 
+                le chosir se fait par un random entre 1 et 2
+            )
+        
+
+
+    Reaction
+
+        -id 
+        -id_utilisateur
+        -id_video
+        -date_reaction
+        -id_commentaire
+ 
+
+Admin
+utilisateur
+Image_slade
+Dernières Nouvelles
+Journale télévisé
+Emission
+Programme
+Direct
+Publicite
+faqs
+session
+Mes_Reaction
+VIDEO
+
+

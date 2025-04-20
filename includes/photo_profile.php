@@ -1,0 +1,1 @@
+<a href="profile.php?token=<?php echo $_SESSION['token'].'&acces_token'.$_SESSION['acces_token'];?>"><img style="border-radius: 200PX;" width="50px" src="images/Peoples/<?php echo $_SESSION['photo_profil'];?>" class="img-fluid product-image" alt="Ajoutez une photo"></a>

@@ -1,0 +1,19 @@
+{
+    "name": "debad/numero",
+    "description": "Application d'inscription avec vérification par SMS.",
+    "require": {
+        "twilio/sdk": "^8.3",
+        "vlucas/phpdotenv": "^5.6",
+        "giggsey/libphonenumber-for-php": "^8.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Debad\\Numero\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nguessan"
+        }
+    ]
+}

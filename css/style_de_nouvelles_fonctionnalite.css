@@ -1,0 +1,195 @@
+
+/* Zone des commentaires */
+.comment-section {
+    padding: 10px;
+}
+
+#comments-section {
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    height: 300px;
+    display: flex;
+    flex-direction: column-reverse; 
+}
+
+/* Champ de saisie des commentaires */
+#comment-form {
+    margin-top: 10px;
+    position: relative;
+}
+
+#comment-input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-submit {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-submit i {
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+
+/* Placeholder vide */
+#comments-section:empty {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#comments-section:empty::before {
+    content: "Aucun commentaire pour l'instant.";
+}
+
+#comments-section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    height: 300px;
+}
+
+.comment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.comment-text {
+    flex: 1;
+}
+
+
+/* ------------ style de selection de drapeau ----------- */
+#country-select {
+    font-size: 16px;
+       padding: 5px;
+       margin-right: 10px;
+   }
+
+   #country-flag {
+       margin-right: 5px;
+       vertical-align: middle;
+   }
+
+   #country-link {
+       display: inline-flex;
+       align-items: center;
+   }
+
+   
+/* -----style de menu deroulant d'emission et inscription, connexion */
+.nav-item {
+    position: relative;
+    display: inline-block;
+}
+
+/* Icône principale */
+.nav-item .custom-icon {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.nav-item .custom-icon:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Menu déroulant */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Juste en dessous de l'icône */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    list-style: none;
+    padding: 10px 0;
+    width: 120px; /* Largeur du menu */
+}
+
+/* Options du menu */
+.nav-item .dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item .dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Couleur de fond au survol */
+}
+
+/* Afficher le menu au survol */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Initial styles */
+#password-requirements li {
+    color: red;
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Cross icon */
+#password-requirements li::before {
+    content: '✗';
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Valid styles */
+#password-requirements li.valid {
+    color: green;
+}
+
+/* Checkmark icon */
+#password-requirements li.valid::before {
+    content: '✓';
+    color: green;
+}

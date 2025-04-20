@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hostonews-php
+    env: docker
+    repo: https://github.com/TON_UTILISATEUR/TON_DEPOT
+    branch: main
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: true
