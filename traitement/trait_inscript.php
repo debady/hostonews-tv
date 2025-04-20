@@ -6,7 +6,7 @@
     require '../vendor/autoload.php'; 
     // require 'C:/wamp64/www/sendmail/vendor/autoload.php'; 
 
-    include('connect_BD.php');
+    //include('connect_BD.php');
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         $recup_email = htmlspecialchars($_POST["email"] ?? '');

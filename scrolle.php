@@ -1,6 +1,6 @@
 
 <?php
-    include('traitement/connect_BD.php');
+    //include('traitement/connect_BD.php');
     try {
         $stmt = $connect->prepare("SELECT * FROM banniere ORDER BY date_poster DESC");
         $stmt->execute();

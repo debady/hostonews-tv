@@ -40,7 +40,7 @@
 
 <!-- journal -->
 <?php
-    include('traitement/connect_BD.php'); // Connexion à la base de données
+    //include('traitement/connect_BD.php'); // Connexion à la base de données
 
     // Initialiser les variables pour éviter des erreurs si aucun élément n'est trouvé
     $titre = '';

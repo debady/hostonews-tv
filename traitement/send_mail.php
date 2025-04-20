@@ -1,6 +1,6 @@
  <?php
     session_start();
-    include('../traitement/connect_BD.php');
+    //include('../traitement/connect_BD.php');
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;

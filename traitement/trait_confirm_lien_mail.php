@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    include('connect_BD.php');
+    //include('connect_BD.php');
 
     $requet = $varConnectBD->prepare('SELECT resset_token FROM utilisateurs WHERE resset_token = ?');
     $requet->execute(array($_GET['token']));

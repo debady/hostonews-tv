@@ -1,6 +1,6 @@
 <?php
 
-    include('traitement/connect_BD.php');
+    //include('traitement/connect_BD.php');
     $categoriesStmt = $pdo->query("SELECT DISTINCT categorie FROM emissions LIMIT 3");
     $categories = $categoriesStmt->fetchAll(PDO::FETCH_COLUMN);
 

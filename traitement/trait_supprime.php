@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('connect_BD.php');
+    //include('connect_BD.php');
     
     $suprimm = $varConnectBD->prepare("DELETE FROM utilisateurs WHERE utilisateurs.id = ?");
     $suprimm->execute(array($_SESSION['id']));

@@ -17,7 +17,7 @@
     //     exit;
     // }
 
-    include('../traitement/connect_BD.php');
+    //include('../traitement/connect_BD.php');
     $stmt = $pdo->query("SELECT commentaire, date_creation FROM commentaires ORDER BY date_creation DESC LIMIT 10");
 
     $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);

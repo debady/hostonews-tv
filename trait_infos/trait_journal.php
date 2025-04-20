@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include('../traitement/connect_BD.php');
+    //include('../traitement/connect_BD.php');
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $titre = htmlspecialchars($_POST['titre']);

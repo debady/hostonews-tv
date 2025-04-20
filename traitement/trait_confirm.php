@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('connect_BD.php');
+    //include('connect_BD.php');
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $verification_code = $_POST['verification_code'];

@@ -1,5 +1,5 @@
 <?php
-    include('traitement/connect_BD.php');
+    //include('traitement/connect_BD.php');
 
     if (!isset($_GET['id']) || empty($_GET['id'])) {
         // die("ID non fourni.");

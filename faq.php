@@ -4,7 +4,7 @@
     include('entete1.php');
     include('entete2.php');
 
-    include('traitement/connect_BD.php');
+    //include('traitement/connect_BD.php');
     $sql = "SELECT * FROM faq";
     $result = $conn->query($sql);
 ?>

@@ -1,6 +1,6 @@
 <?php 
 
-    include('traitement/connect_BD.php');
+    //include('traitement/connect_BD.php');
     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $id = intval($_GET['id']);
 
@@ -11,7 +11,6 @@
         $baniere = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!$baniere) {
-            // die("Aucune baniere trouvée avec cet ID.");
             header('Location:index.php');
         }
     } else {
@@ -23,7 +22,6 @@
     include('entete1.php');
     include('entete2.php');
 ?>
-
 
             <section class="slick-slideshow">
                     <div class="slick-custom">

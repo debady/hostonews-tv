@@ -1,6 +1,6 @@
 <?php
     // Connexion à la base de données
-    include('traitement/connect_BD.php');
+    //include('traitement/connect_BD.php');
 
     // Récupération des émissions depuis la base de données
     $query = "SELECT id, titre, categorie, image1, episode FROM emissions ORDER BY categorie";

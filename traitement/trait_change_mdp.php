@@ -1,7 +1,7 @@
 <?php
     // le script pour modifier le mot de passe quand connecter
     session_start();
-    include('connect_BD.php');
+    //include('connect_BD.php');
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

@@ -3,7 +3,7 @@
 =======
     // require 'config.php';
 >>>>>>> 240004f99927142e38f3b2bbab142d44f0fa5e6a
-    include('../traitement/connect_BD.php');
+    //include('../traitement/connect_BD.php');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $token = $_POST['token'];

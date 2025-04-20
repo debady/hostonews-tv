@@ -2,7 +2,7 @@
     $titre_appli = 'Detail Journal télévisé ';
     include('entete1.php');   
     
-   include('traitement/connect_BD.php');
+   //include('traitement/connect_BD.php');
 
     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $id = intval($_GET['id']);
